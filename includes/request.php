@@ -13,8 +13,8 @@ function save_log($request, $response) {
 
 function btcid_query($method, array $req = array()) {
     // API settings
-    $key = ''; // your API-key
-    $secret = ''; // your Secret-key
+    $key = getenv('BTCID_API_KEY'); // your API-key
+    $secret = getenv('BTCID_SECRET_KEY'); // your Secret-key
     $req['method'] = $method;
     $req['nonce'] = '9223372036854775808';
     // $req['nonce'] = 0;
